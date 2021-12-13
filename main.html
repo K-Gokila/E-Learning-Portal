@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" type="module"></script>
+</head>
+<body>
+    <nav>
+        <img id="Logo" src="./Assets/Logo1.PNG" alt="Logo">
+        <div class="navbar">G Academy</div>
+            <ul class="nav-links-container">
+                <li> <a href="main.html"> Home</a></li>
+                <li> <a href="ExploreCourses.html"> Explore Courses</a></li>
+                <li> <a href="FeedBack.html"> Feedback</a></li>
+            </ul>
+            <div class="resDesign">
+                <div id="line1"></div>
+                <div id="line2"></div>
+                <div id="line3"></div>
+            </div>
+    </nav>
+    <div class="HomeLogin">
+        <img id="Logo-girl" src="./Assets/EL-girl.PNG" alt="EL-girl">
+        <div class="LoginForm">
+            <h1>Sign In </h1><br><br>
+            <input id="emailBox" type="text" autocomplete="off" aria-invalid="false" placeholder="Email"><br><br>
+            <input id="passwordBox" type="password" autocomplete="off" aria-invalid="false" placeholder="Password"><br><br><br>
+            <button id="login-button" onclick="Login()">Sign in</button><br><br><br>
+            <p class="signUpButton">Don't have an account?  <a href="signUp.html">Sign Up Now.</a></p>
+        </div>
+    </div>
+
+   <script>
+        function Login(){
+        var lemail= document.getElementById("emailBox").value;
+        var lpassword= document.getElementById("passwordBox").value;
+        sessionStorage.setItem(lemail, lpassword);
+        alert("Login Successfully");
+    }
+   </script>
+</body>
+</html>

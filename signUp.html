@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body{
+            /* font-family: 'Montserrat', sans-serif; */
+            padding-left: 33%;
+            padding-top: 4%;
+            align-items: center;
+        }
+.signUpForm{
+    background-color: white;
+    width: 300px;
+    height: 490px;
+    padding: 50px;
+    border-radius: 20px;
+    align-self: center;
+}
+
+h1{
+    text-decoration: black;
+    text-decoration-line: underline;
+    padding-left: 26%;
+}
+
+.signP{
+    font-size: 15px;
+    font-weight: normal;
+    color: black;
+    padding-left: 7%;
+}
+
+#name{
+    height: 30px;
+    width: 280px;
+    border-radius: 5px;
+    border-color: #ADABAB;  
+}
+
+#emailBox{
+    height: 30px;
+    width: 280px;
+    border-radius: 5px;
+    border-color: #ADABAB;
+}
+
+#passwordBox{
+    height: 30px;
+    width: 280px;
+    border-radius: 5px;
+    border-color: #ADABAB;
+}
+
+#confirmPass{
+    height: 30px;
+    width: 280px;
+    border-radius: 5px;
+    border-color: #ADABAB;
+}
+
+#signUp-button{
+    background-color: aqua;
+    color: black;
+    font-size: large;
+    font-weight: bolder;
+    height: 40px;
+    width: 290px;
+    border-radius: 5px;
+    font-size: large;        
+}
+.LoginButton{
+    font-size: normal;
+    color: black;
+}
+.LoginButton>a{
+    color: red;
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <div class="signUpForm">
+        <h1>Sign Up</h1>
+        <p class="signP">Please fill this form to create an account.</p><br>
+        <input id="name" type="text" autocomplete="off" aria-invalid="false" placeholder="Name"><br><br>
+        <input id="emailBox" type="text" autocomplete="off" aria-invalid="false" placeholder="Email"><br><br>
+        <input id="passwordBox" type="password" autocomplete="off" aria-invalid="false" placeholder="Password"><br><br>
+        <input id="confirmPass" type="password" autocomplete="off" aria-invalid="false" placeholder="Confirm Password"><br><br><br>
+        <button id="signUp-button" onclick="SignUp()">Sign Up</button><br><br>
+        <p class="LoginButton">Already you have an account?  <a href="main.html">Login here.</a></p>
+    </div>
+
+
+    <script>
+        function SignUp(){
+        var semail= document.getElementById("emailBox").value;
+        var spassword= document.getElementById("passwordBox").value;
+        sessionStorage.setItem(semail, spassword);
+        alert("Sign Up Successfully");
+    }
+   </script>
+</body>
+</html>

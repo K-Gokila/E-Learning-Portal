@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedBack</title>
+    <style>
+        body{
+            padding-left: 33%;
+            padding-top: 4%;
+            align-items: center;
+        }
+        .containerFeed{
+            background-color: white;
+            width: 350px;
+            height: 490px;
+            padding: 50px;
+            border-radius: 20px;
+            align-self: center;
+            justify-content: center;
+        }
+        h1{
+        text-decoration: black;
+        text-decoration-line: underline;
+        padding-left: 15%;
+        }
+        #nameFeed{
+            height: 30px;
+            width: 300px;
+            border-radius: 5px;
+            border-color: #ADABAB;
+        }
+        #Phone{
+            height: 30px;
+            width: 300px;
+            border-radius: 5px;
+            border-color: #ADABAB;
+        }
+        #emailAdd{
+            height: 30px;
+            width: 300px;
+            border-radius: 5px;
+            border-color: #ADABAB;
+        }
+        #textArea{
+            height: 80px;
+            width: 300px;
+            border-radius: 5px;
+            border-color: #4e4e4e;
+            border-width: 2px;
+        }
+        #feedButton{
+            background-color: aqua;
+            color: black;
+            font-size: large;
+            font-weight: bolder;
+            height: 40px;
+            width: 310px;
+            border-radius: 5px;
+            font-size: large; 
+        }
+    </style>
+</head>
+<body>
+    <div class="containerFeed">
+        <h1>Feedback Form</h1><br>
+        <input id="nameFeed" type="text" autocomplete="off" aria-invalid="false" placeholder="Name"><br><br>
+        <input id="Phone" type="text" autocomplete="off" aria-invalid="false" placeholder="Phone Number" maxlength="10"><br><br>
+        <input id="emailAdd" type="email" autocomplete="off" aria-invalid="false" placeholder="Email Address"><br><br>
+        <textarea id="textArea" name="message" autocomplete="off" aria-invalid="false" placeholder="Message" value=""></textarea><br><br><br>
+        <button id="feedButton" onclick="FeedBack()">Submit</button>
+    </div>
+
+    <script>
+        function FeedBack() {
+            var fname= document.getElementById("nameFeed").value;
+            var fphone= document.getElementById("Phone").value;
+            var femail= document.getElementById("emailAdd").value;
+            var ftext= document.getElementById("textArea").value;
+            sessionStorage.setItem(fname, fphone, femail, ftext);
+            alert("Feedback has successfully recorded")
+        }
+    </script>
+</body>
+</html>
