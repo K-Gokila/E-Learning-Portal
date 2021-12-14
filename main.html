@@ -14,7 +14,7 @@
         <div class="navbar">G Academy</div>
             <ul class="nav-links-container">
                 <li> <a href="main.html"> Home</a></li>
-                <li> <a href="ExploreCourses.html"> Explore Courses</a></li>
+                <li> <a href="LoginRequired.html"> Explore Courses</a></li>
                 <li> <a href="FeedBack.html"> Feedback</a></li>
             </ul>
             <div class="resDesign">
@@ -27,8 +27,8 @@
         <img id="Logo-girl" src="./Assets/EL-girl.PNG" alt="EL-girl">
         <div class="LoginForm">
             <h1>Sign In </h1><br><br>
-            <input id="emailBox" type="text" autocomplete="off" aria-invalid="false" placeholder="Email"><br><br>
-            <input id="passwordBox" type="password" autocomplete="off" aria-invalid="false" placeholder="Password"><br><br><br>
+            <input name="EMail" id="emailBox" type="text" autocomplete="off" aria-invalid="false" placeholder="Email"><br><br>
+            <input name="Password" id="passwordBox" type="password" autocomplete="off" aria-invalid="false" placeholder="Password"><br><br><br>
             <button id="login-button" onclick="Login()">Sign in</button><br><br><br>
             <p class="signUpButton">Don't have an account?  <a href="signUp.html">Sign Up Now.</a></p>
         </div>
@@ -36,11 +36,11 @@
 
    <script>
         function Login(){
-        var lemail= document.getElementById("emailBox").value;
-        var lpassword= document.getElementById("passwordBox").value;
-        sessionStorage.setItem(lemail, lpassword);
-        alert("Login Successfully");
-    }
+            var lemail= document.getElementById("emailBox").value;
+            var lpassword= document.getElementById("passwordBox").value;
+            sessionStorage.setItem(lemail, lpassword);
+            location.href="ExploreCourses.html";
+        }
    </script>
 </body>
 </html>
